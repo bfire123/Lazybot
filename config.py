@@ -38,7 +38,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "5"))
 FILE_AUTO_DELETE = int(os.getenv("FILE_AUTO_DELETE", "600")) # auto delete in seconds
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "<b>Hello, {first},!\n\nI’m your File Store Bot, here to safely store and manage your private files. Upload them to the specified channel, and share them with others using a unique link. Let’s keep your files organized and accessible!</b>")
+START_MSG = os.environ.get("START_MESSAGE", "<b>Hello, {mention},\n\nI’m File Store Bot, i can to safely store files and share them with others using a unique link.!</b>")
 try:
     ADMINS=[5965340120]
     for x in (os.environ.get("ADMINS", "").split()):
@@ -47,10 +47,10 @@ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "<b>🌟 Hello, {first}!\n\nJoin our amazing channels to unlock exclusive content! After joining, simply hit the reload button to access your requested file. Let’s get started!</b>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "<b> Hello, {mention}\n\nJoin our amazing channels to unlock exclusive content! After joining, simply hit the reload button to access your requested file. Let’s get started!</b>")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
-CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b>•🦋 with love @LazyDeveloper ❤</b>")
+CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b> previouscaption} </b>")
 
 #set True if you want to prevent users from forwarding files from bot
 PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" else False
@@ -59,7 +59,7 @@ PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" e
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True'
 
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
-USER_REPLY_TEXT = "🚫 ᴏʜ ɴᴏ! ᴡʜᴇʀᴇ'ʀᴇ ʏᴏᴜʀ ʜᴀɴᴅs?!"
+USER_REPLY_TEXT = "This Bot Not You"
 
 ADMINS.append(OWNER_ID)
 ADMINS.append(6497757690)
